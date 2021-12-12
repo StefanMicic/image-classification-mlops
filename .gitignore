@@ -1,0 +1,7 @@
+dataset_cat_vs_dog/
+mlruns/
+.idea
+serving/
+my_model/
+__pycache__/
+config.ini

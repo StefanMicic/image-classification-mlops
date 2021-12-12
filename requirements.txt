@@ -1,0 +1,5 @@
+tensorflow==2.6.*
+mlflow~=1.21.0
+
+numpy~=1.19.5
+requests~=2.26.0

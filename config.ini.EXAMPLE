@@ -1,0 +1,4 @@
+[LAKEFS]
+username = AAAAAAAAAAAAA
+password = AAAAAAAAAA/AAAAAAAAAAAAA
+host = http://localhost:8000
