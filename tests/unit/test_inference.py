@@ -7,7 +7,7 @@ from base64 import b64encode
 import cv2
 import numpy as np
 
-from src.prepare_and_export.inference import encode_image, request_data
+from prepare_and_export.inference import encode_image, request_data
 
 
 class TestInference(unittest.TestCase):

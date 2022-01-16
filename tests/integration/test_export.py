@@ -6,8 +6,8 @@ import unittest
 import cv2
 import numpy as np
 
-from src.classification_model import ClassificationModel
-from src.prepare_and_export.export import ModelExporter
+from classification_model import ClassificationModel
+from prepare_and_export.export import ModelExporter
 
 
 class TestExport(unittest.TestCase):

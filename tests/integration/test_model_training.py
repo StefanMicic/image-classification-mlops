@@ -6,8 +6,8 @@ import unittest
 import cv2
 import numpy as np
 
-from src.classification_model import ClassificationModel
-from src.data_preprocessing.preprocessing import DataPipeline
+from classification_model import ClassificationModel
+from data_preprocessing.preprocessing import DataPipeline
 
 
 class TestTraining(unittest.TestCase):

@@ -5,7 +5,7 @@ from unittest.mock import patch
 import cv2
 import numpy as np
 
-from src.utils import prepare
+from utils import prepare
 
 
 class TestUtils(unittest.TestCase):
