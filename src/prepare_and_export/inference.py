@@ -1,5 +1,5 @@
 from base64 import b64encode
-from typing import Dict, List, Union
+from typing import Any, Dict
 
 import cv2
 import numpy as np
@@ -20,7 +20,7 @@ def encode_image(img_path: str) -> str:
     return b64encode(code).decode('utf-8')
 
 
-def request_data(net_input: str) -> Dict[str, List[str]]:
+def request_data(net_input: str) -> Dict[str, Any]:
     """ Setups data dict for post request.
 
     Args:

@@ -9,7 +9,7 @@ class ClassificationModel(keras.Model):
         """Creates instance of test classification model."""
         super(ClassificationModel, self).__init__()
 
-        size = 128
+        size = 256
         base_model = keras.applications.MobileNetV2(
             weights="imagenet",
             input_shape=(size, size, 3),

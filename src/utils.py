@@ -1,5 +1,6 @@
 from typing import Any, Callable
 
+import numpy as np
 import tensorflow as tf
 from tensorflow import Tensor
 
@@ -18,7 +19,7 @@ def decode_image(input_tensor: str) -> Tensor:
     return tf.cast(ret, tf.float32)
 
 
-def prepare(input_tensor: str) -> object:
+def prepare(input_tensor: str) -> np.array:
     """
     Prepare input string for model by decoding, resizing and normalizing.
 
