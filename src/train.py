@@ -2,9 +2,9 @@ import argparse
 
 import mlflow
 
-from src.classification_model import ClassificationModel
-from src.data_preprocessing.preprocessing import DataPipeline
-from src.prepare_and_export.export import ModelExporter
+from classification_model import ClassificationModel
+from data_preprocessing.preprocessing import DataPipeline
+from prepare_and_export.export import ModelExporter
 
 
 def log_model(dt_params, metrics, tf_model) -> None:

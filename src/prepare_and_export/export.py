@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-from src.utils import processing_pipeline
+from utils import processing_pipeline
 
 
 class ModelExporter:

@@ -3,7 +3,7 @@ import os
 import cv2
 import tensorflow as tf
 
-from src.data_preprocessing.lakefs import LakeFSManipulator
+from data_preprocessing.lakefs import LakeFSManipulator
 
 
 class DataPipeline:

@@ -10,7 +10,7 @@ from utils import prepare
 
 class TestUtils(unittest.TestCase):
 
-    @patch('src.utils.decode_image')
+    @patch('utils.decode_image')
     def test_prepare(self, mock_settings):
         image = np.random.rand(256, 256, 3)
         mock_settings.return_value = image
