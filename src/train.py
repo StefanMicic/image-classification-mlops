@@ -30,14 +30,15 @@ def pipeline():
     parser.add_argument("--batch_size", type=int, default=2)
     parser.add_argument("--epochs", type=int, default=1)
     parser.add_argument("--model_path", type=str, default="my_model")
+    parser.add_argument("--data_path", type=str, default="dataset_cat_vs_dog")
     args = parser.parse_args()
 
     mlflow.set_experiment('Cat_vs_Dog')
 
-    data_pipeline = DataPipeline("dataset_cat_vs_dog")
+    data_pipeline = DataPipeline(args.data_path)
     data_pipeline.prepare_dataset()
     train_dataset = data_pipeline.get_dataset()
-    data_pipeline.commit_data()
+    # data_pipeline.commit_data()
 
     model = ClassificationModel()
     model.compile(loss="binary_crossentropy",
@@ -46,7 +47,7 @@ def pipeline():
     hist = model.fit(train_dataset,
                      batch_size=args.batch_size,
                      epochs=args.epochs)
-    log_model({}, {'accuracy': hist.history['accuracy'][-1], 'loss': hist.history['loss'][-1]}, model)
+    # log_model({}, {'accuracy': hist.history['accuracy'][-1], 'loss': hist.history['loss'][-1]}, model)
     model.save(args.model_path)
     exporter = ModelExporter(args.model_path, 'serving')
     exporter()

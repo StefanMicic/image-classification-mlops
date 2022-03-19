@@ -20,7 +20,7 @@ class ModelExporter:
         self.model_path = model_path
         self.model_serving_path = model_serving_path
 
-    def __call__(self) -> None:
+    def __call__(self, version: int = 1) -> None:
         """
         Adds string as input at the beginning of the model and export it for tensorflow serving.
         """
@@ -36,7 +36,7 @@ class ModelExporter:
         output = model(preprocess)
 
         model1 = tf.keras.Model(model_input, output)
-        model1.save(f"{self.model_serving_path}/1")
+        model1.save(f"{self.model_serving_path}/{version}")
 
 
 def main():

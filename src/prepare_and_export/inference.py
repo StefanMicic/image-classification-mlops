@@ -37,7 +37,7 @@ def request_data(net_input: str) -> Dict[str, Any]:
 
 
 def main():
-    input_data = encode_image("dataset_cat_vs_dog/dog/images.jpeg")
+    input_data = encode_image("/home/stefan/Documents/HTEC/MLOps/data/dataset_cat_vs_dog/dog/images.jpeg")
 
     predict_url = f'http://localhost:8501'
     url = (
